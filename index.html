@@ -25,14 +25,58 @@
       padding: 0 20px;
     }
 
-    /* Header */
-    header {
-      display: none;
+    /* Top Bar */
+    .top-bar {
+      background: white;
+      border-radius: 16px;
+      padding: 16px 24px;
+      margin: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 20px;
+      z-index: 100;
+    }
+
+    .top-bar-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .top-bar-links a {
+      color: #333333;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+
+    .top-bar-links a:hover {
+      color: #FF4200;
+    }
+
+    .top-bar-button {
+      padding: 12px 24px;
+      background: #FF4200;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s;
+    }
+
+    .top-bar-button:hover {
+      background: #E63900;
+      transform: scale(1.05);
     }
 
     /* Hero Section */
     .hero {
-      padding: 80px 0;
+      padding: 80px 0 60px;
       text-align: center;
     }
 
@@ -42,12 +86,15 @@
       color: #333333;
       margin-bottom: 20px;
       line-height: 1.1;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .hero p {
-      font-size: 20px;
+    .hero-subtitle {
+      font-size: 18px;
       color: #666;
-      max-width: 700px;
+      max-width: 600px;
       margin: 0 auto 40px;
     }
 
@@ -103,17 +150,9 @@
       box-shadow: 0 8px 20px rgba(255, 66, 0, 0.1);
     }
 
-    .feature-number {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: #FF4200;
-      color: white;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 40px;
-      text-align: center;
+    .feature-icon {
+      width: 48px;
+      height: 48px;
       margin-bottom: 15px;
     }
 
@@ -144,70 +183,75 @@
       line-height: 1.1;
     }
 
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      max-width: 800px;
+    .pricing-card {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 16px;
+      border: 2px solid #FF4200;
+      box-shadow: 0 8px 30px rgba(255, 66, 0, 0.15);
+      max-width: 500px;
       margin: 0 auto;
     }
 
-    .pricing-card {
-      background: white;
-      padding: 40px;
-      border-radius: 16px;
-      border: 2px solid #E5E5E5;
-      text-align: center;
-      transition: all 0.3s;
-    }
-
-    .pricing-card:hover {
-      border-color: #FF4200;
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(255, 66, 0, 0.1);
-    }
-
-    .pricing-card.pro {
-      border-color: #FF4200;
-      box-shadow: 0 8px 30px rgba(255, 66, 0, 0.15);
-    }
-
     .pricing-card h3 {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       color: #333333;
       line-height: 1.1;
+    }
+
+    .pricing-card .description {
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .pricing-card li {
+      padding: 12px 0;
+      color: #333333;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pricing-card li::before {
+      content: "✓";
+      color: #FF4200;
+      font-weight: 700;
+      font-size: 20px;
     }
 
     .pricing-card .price {
       font-size: 40px;
       font-weight: 700;
-      color: #FF4200;
-      margin-bottom: 10px;
-    }
-
-    .pricing-card .period {
-      color: #666;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
-
-    .pricing-card ul {
-      list-style: none;
-      text-align: left;
+      color: #333333;
       margin-bottom: 30px;
     }
 
-    .pricing-card li {
-      padding: 10px 0;
-      color: #666;
-      font-size: 15px;
-      border-bottom: 1px solid #F0F0F0;
+    .pricing-button {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: #FF4200;
+      color: white;
+      text-decoration: none;
+      border-radius: 15px;
+      font-weight: 600;
+      font-size: 18px;
+      text-align: center;
+      transition: all 0.3s;
     }
 
-    .pricing-card li:last-child {
-      border-bottom: none;
+    .pricing-button:hover {
+      background: #E63900;
+      transform: scale(1.02);
     }
 
     /* Footer */
@@ -223,14 +267,6 @@
       gap: 30px;
     }
 
-    .footer-section h4 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: #333333;
-      line-height: 1.1;
-    }
-
     .footer-section p {
       color: #666;
       font-size: 14px;
@@ -238,22 +274,47 @@
     }
 
     .footer-section a {
-      color: #FF4200;
+      color: #666;
       text-decoration: none;
-      font-weight: 500;
     }
 
     .footer-section a:hover {
-      text-decoration: underline;
+      color: #FF4200;
     }
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        margin: 12px;
+      }
+
+      .top-bar-links {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .top-bar-links a {
+        font-size: 14px;
+      }
+
+      .top-bar-button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 60px 0 40px;
+      }
+
       .hero h1 {
         font-size: 32px;
       }
 
-      .hero p {
+      .hero-subtitle {
         font-size: 16px;
       }
 
@@ -262,32 +323,21 @@
         font-size: 28px;
       }
 
-      .pricing-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .header-content {
-        flex-direction: column;
-        gap: 15px;
+      .pricing-card {
+        padding: 30px 20px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">Fasty</div>
-        <a href="https://t.me/ai_fasty_bot" class="telegram-link" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-          </svg>
-          Открыть бот
-        </a>
-      </div>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-links">
+      <a href="#features">Функции</a>
+      <a href="#pricing">Цена</a>
     </div>
-  </header>
+    <a href="https://t.me/ai_fasty_bot" class="top-bar-button" target="_blank">Попробовать</a>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -317,34 +367,45 @@
           </radialGradient>
         </defs>
       </svg>
-      <h1>Fasty — сервис для быстрого создания контента</h1>
-      <p>Telegram-бот, который помогает создавать вирусный контент для социальных сетей с использованием искусственного интеллекта.</p>
-      <a href="https://t.me/ai_fasty_bot" class="hero-bot" target="_blank">Перейти в Fasty</a>
+      <h1>Создавай контент за 15 минут с помощью ИИ и готовых инструментов</h1>
+      <p class="hero-subtitle">Fasty — это твой верный помощник в ведении блога без хаоса и траты времени</p>
+      <a href="https://t.me/ai_fasty_bot" class="hero-bot" target="_blank">Создать контент</a>
     </div>
   </section>
 
   <!-- Features Section -->
-  <section class="features">
+  <section class="features" id="features">
     <div class="container">
-      <h2>Возможности Fasty</h2>
+      <h2>Что умеет Fasty:</h2>
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-number">1</div>
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="#FF4200" stroke-width="2">
+            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
           <h3>Генерация идей для контента</h3>
           <p>Анализ трендов и создание 15 вирусных идей для постов</p>
         </div>
         <div class="feature-card">
-          <div class="feature-number">2</div>
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="#FF4200" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="9" y1="9" x2="15" y2="9"/>
+            <line x1="9" y1="15" x2="15" y2="15"/>
+          </svg>
           <h3>Создание постов-каруселей</h3>
           <p>Автоматическая генерация структурированных постов-каруселей для Instagram с дизайном</p>
         </div>
         <div class="feature-card">
-          <div class="feature-number">3</div>
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="#FF4200" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
           <h3>Генерация хуков</h3>
           <p>Создание цепляющих заголовков для рилс и постов</p>
         </div>
         <div class="feature-card">
-          <div class="feature-number">4</div>
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="#FF4200" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
           <h3>Визуальный редактор</h3>
           <p>Возможность редактировать текст, дизайн и экспортировать готовые слайды</p>
         </div>
@@ -353,26 +414,20 @@
   </section>
 
   <!-- Pricing Section -->
-  <section class="pricing">
+  <section class="pricing" id="pricing">
     <div class="container">
-      <h2>Тарифы</h2>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>Бесплатный доступ</h3>
-          <div class="price">0 ₽</div>
-          <div class="period"></div>
-          <ul>
-            <li>3 бесплатные генерации контента</li>
-          </ul>
-        </div>
-        <div class="pricing-card pro">
-          <h3>Подписка PRO</h3>
-          <div class="price">1290 ₽</div>
-          <div class="period">в месяц</div>
-          <ul>
-            <li>Безлимитное использование всех функций бота</li>
-          </ul>
-        </div>
+      <h2>Получи доступ ко всем функциям Fasty</h2>
+      <div class="pricing-card">
+        <h3>Fasty Pro</h3>
+        <p class="description">Доступ ко всем функциям для быстрого создания контента с ИИ</p>
+        <ul>
+          <li>Безлимитная генерация идей и заголовков</li>
+          <li>Неограниченное создание постов-каруселей с дизайном</li>
+          <li>Доступ ко всем обновлениям</li>
+          <li>Приоритетная поддержка</li>
+        </ul>
+        <div class="price">1290 руб/мес</div>
+        <a href="https://t.me/ai_fasty_bot" class="pricing-button" target="_blank">Начать создавать</a>
       </div>
     </div>
   </section>
@@ -382,18 +437,18 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h4>Информация о поставщике услуги</h4>
           <p>
             ИП Корешилов Егор Юрьевич<br>
             ИНН 352706623956<br>
-            ОРГН 324350000002644
+            ОГРНИП 324350000002644
           </p>
         </div>
         <div class="footer-section">
-          <h4>Контакты</h4>
           <p>
             Поддержка: <a href="https://t.me/ekoreshilov" target="_blank">@ekoreshilov</a><br>
-            Telegram-бот: <a href="https://t.me/ai_fasty_bot" target="_blank">@ai_fasty_bot</a>
+            Telegram-бот: <a href="https://t.me/ai_fasty_bot" target="_blank">@ai_fasty_bot</a><br>
+            Email: <a href="mailto:fastyai.app@gmail.com">fastyai.app@gmail.com</a><br>
+            <a href="/terms.html">Условия использования</a>
           </p>
         </div>
       </div>
