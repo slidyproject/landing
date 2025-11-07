@@ -6,11 +6,7 @@
   <title>Fasty — сервис для быстрого создания контента</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -19,333 +15,256 @@
       line-height: 1.6;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* Top Bar */
     .top-bar {
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
       border-radius: 16px;
       padding: 16px 24px;
       margin: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       position: sticky;
       top: 20px;
       z-index: 100;
     }
 
-    .top-bar-links {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-    }
-
+    .top-bar-links { display: flex; gap: 32px; align-items: center; }
     .top-bar-links a {
-      color: #333333;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 15px;
+      color: #333; text-decoration: none; font-weight: 500; font-size: 15px;
       transition: color 0.3s;
     }
-
-    .top-bar-links a:hover {
-      color: #FF4200;
-    }
-
+    .top-bar-links a:hover { color: #FF4200; }
     .top-bar-button {
-      padding: 12px 24px;
-      background: #FF4200;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 15px;
-      transition: all 0.3s;
+      padding: 12px 24px; background: #FF4200; color: #fff;
+      text-decoration: none; border-radius: 12px; font-weight: 600;
+      font-size: 15px; transition: all 0.3s;
     }
-
-    .top-bar-button:hover {
-      background: #E63900;
-      transform: scale(1.05);
-    }
+    .top-bar-button:hover { background: #E63900; transform: scale(1.05); }
 
     /* Hero Section */
-    .hero {
-      padding: 80px 0 60px;
-      text-align: center;
-    }
-
+    .hero { padding: 80px 0 60px; text-align: center; }
     .hero h1 {
-      font-size: 48px;
-      font-weight: 700;
-      color: #333333;
-      margin-bottom: 20px;
-      line-height: 1.1;
-      letter-spacing: -0.8px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 48px; font-weight: 700; color: #333;
+      margin-bottom: 20px; line-height: 1.1; letter-spacing: -0.8px;
+      max-width: 800px; margin-left: auto; margin-right: auto;
     }
-
     .hero-subtitle {
-      font-size: 18px;
-      color: #666;
-      max-width: 600px;
+      font-size: 18px; color: #666; max-width: 600px;
       margin: 0 auto 40px;
     }
-
     .hero-bot {
-      display: inline-block;
-      padding: 16px 32px;
-      background: #FF4200;
-      color: white;
-      text-decoration: none;
-      border-radius: 15px;
-      font-weight: 600;
-      font-size: 18px;
-      transition: all 0.3s;
+      display: inline-block; padding: 16px 32px; background: #FF4200;
+      color: white; text-decoration: none; border-radius: 15px;
+      font-weight: 600; font-size: 18px; transition: all 0.3s;
+    }
+    .hero-bot:hover { background: #E63900; transform: scale(1.05); }
+
+    /* Pain Section */
+    .pain {
+      background: white;
+      padding: 60px 0;
+    }
+    .pain h2 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .pain-list {
+      list-style: none;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+    .pain-list li {
+      font-size: 17px;
+      margin-bottom: 14px;
+      padding-left: 30px;
+      position: relative;
+      color: #444;
+    }
+    .pain-list li::before {
+      content: "❌";
+      position: absolute;
+      left: 0;
+      color: #FF4200;
+    }
+    .pain p {
+      text-align: center;
+      color: #666;
+      font-size: 16px;
     }
 
-    .hero-bot:hover {
-      background: #E63900;
-      transform: scale(1.05);
+    /* Solution Section */
+    .solution {
+      background: #fff7f4;
+      padding: 60px 0;
+    }
+    .solution h2 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .steps {
+      display: grid;
+      gap: 16px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .step {
+      background: white;
+      border-radius: 12px;
+      padding: 18px 20px;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .solution-subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     /* Features Section */
-    .features {
-      padding: 60px 0;
-      background: #f5f5f5;
-    }
-
+    .features { padding: 60px 0; background: #f5f5f5; }
     .features h2 {
-      text-align: center;
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 50px;
-      color: #333333;
-      line-height: 1.1;
-      letter-spacing: -0.8px;
+      text-align: center; font-size: 36px; font-weight: 700;
+      margin-bottom: 50px; color: #333;
     }
-
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
-
     .feature-card {
       background: white;
       padding: 30px;
       border-radius: 16px;
-      border: none;
       transition: all 0.3s;
     }
-
     .feature-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
-
     .feature-icon {
-      width: 32px;
-      height: 32px;
-      margin-bottom: 15px;
-      color: #FF4200;
+      width: 32px; height: 32px; margin-bottom: 15px; color: #FF4200;
     }
-
     .feature-card h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: #333333;
-      line-height: 1.1;
-      letter-spacing: -0.8px;
+      font-size: 20px; font-weight: 600; margin-bottom: 10px; color: #333;
     }
+    .feature-card p { color: #666; font-size: 15px; }
 
-    .feature-card p {
-      color: #666;
-      font-size: 15px;
-    }
-
-    /* Pricing Section */
-    .pricing {
+    /* Benefits Section */
+    .benefits {
+      background: white;
       padding: 60px 0;
     }
+    .benefits h2 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .benefit-card {
+      background: #fff7f4;
+      border-left: 4px solid #FF4200;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 16px;
+      color: #444;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
 
+    /* Pricing */
+    .pricing { padding: 60px 0; }
     .pricing h2 {
       text-align: center;
       font-size: 36px;
       font-weight: 700;
       margin-bottom: 50px;
-      color: #333333;
-      line-height: 1.1;
-      letter-spacing: -0.8px;
     }
-
     .pricing-card {
       background: white;
       padding: 50px 50px;
       border-radius: 16px;
       border: 1px solid #FF4200;
-      box-shadow: 0 8px 30px rgba(255, 66, 0, 0.15);
+      box-shadow: 0 8px 30px rgba(255,66,0,0.15);
       max-width: 500px;
       margin: 0 auto;
       text-align: center;
     }
-
-    .pricing-card h3 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #333333;
-      line-height: 1.1;
-      letter-spacing: -0.8px;
-    }
-
-    .pricing-card .description {
-      color: #666;
-      margin-bottom: 30px;
-      font-size: 16px;
-      text-align: left;
-      padding-left: 10px;
-    }
-
-    .pricing-card ul {
-      list-style: none;
-      margin-bottom: 30px;
-      text-align: left;
-      padding-left: 10px;
-    }
-
-    .pricing-card li {
-      padding: 12px 0;
-      color: #333333;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .pricing-card li::before {
-      content: "";
-      width: 20px;
-      height: 20px;
-      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 6L9 17l-5-5' stroke='%23FF4200' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-size: contain;
-      background-repeat: no-repeat;
-      flex-shrink: 0;
-    }
-
-    .pricing-card .price {
-      font-size: 28px;
-      font-weight: 700;
-      color: #333333;
-      margin-bottom: 30px;
-    }
-
     .pricing-button {
       display: block;
       width: 100%;
       padding: 16px;
       background: #FF4200;
       color: white;
-      text-decoration: none;
       border-radius: 15px;
       font-weight: 600;
       font-size: 18px;
       text-align: center;
       transition: all 0.3s;
+      text-decoration: none;
     }
+    .pricing-button:hover { background: #E63900; transform: scale(1.02); }
 
-    .pricing-button:hover {
-      background: #E63900;
-      transform: scale(1.02);
+    /* Final CTA */
+    .final-cta {
+      text-align: center;
+      padding: 60px 20px;
+      background: #fff7f4;
     }
-
-    /* Footer */
-    footer {
-      background: white;
-      padding: 40px 0;
-      border-top: 1px solid #E5E5E5;
+    .final-cta h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
+    .final-cta a {
+      display: inline-block;
+      background: #FF4200;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 15px;
+      font-weight: 600;
+      font-size: 18px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .final-cta a:hover { background: #E63900; transform: scale(1.05); }
 
+    footer { background: white; padding: 40px 0; border-top: 1px solid #E5E5E5; }
     .footer-content {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
+    .footer-section p { color: #666; font-size: 14px; line-height: 1.8; }
+    .footer-section a { color: #666; text-decoration: none; }
+    .footer-section a:hover { color: #FF4200; }
 
-    .footer-section p {
-      color: #666;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .footer-section a {
-      color: #666;
-      text-decoration: none;
-    }
-
-    .footer-section a:hover {
-      color: #FF4200;
-    }
-
-    /* Mobile Responsive */
     @media (max-width: 768px) {
-      .top-bar {
-        padding: 12px 16px;
-        margin: 12px;
-        top: 12px;
-      }
-
-      .top-bar-links {
-        gap: 20px;
-      }
-
-      .top-bar-links a {
-        font-size: 13px;
-      }
-
-      .top-bar-button {
-        padding: 10px 18px;
-        font-size: 13px;
-      }
-
-      .hero {
-        padding: 60px 0 40px;
-      }
-
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      .hero-subtitle {
-        font-size: 16px;
-      }
-
-      .features h2,
-      .pricing h2 {
-        font-size: 28px;
-      }
-
-      .pricing-card {
-        padding: 30px 20px;
-      }
-
-      .footer-section p {
-        line-height: 1.8;
-      }
+      .hero h1 { font-size: 32px; }
+      .hero-subtitle { font-size: 16px; }
     }
   </style>
 </head>
 <body>
+
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="top-bar-links">
@@ -355,65 +274,78 @@
     <a href="https://t.me/ai_fasty_bot" class="top-bar-button" target="_blank">Попробовать</a>
   </div>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <svg width="100" height="47" viewBox="0 0 821 387" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 30px;">
-        <mask id="path-1-inside-1_1315_69" fill="white">
-          <path d="M501.807 5.39339C668.936 -12.1224 800.593 21.2934 818.361 94.1589C840.604 185.375 675.948 303.867 450.592 358.82C434.122 362.836 417.783 366.399 401.636 369.523C407.575 368.129 413.556 366.627 419.572 365.009C584.905 320.546 714.859 207.826 709.831 113.243C705.868 38.7054 619.259 -2.3243 501.807 5.39339ZM370.044 28.4992C388.714 23.9465 407.216 19.9756 425.461 16.568C417.502 18.3418 409.465 20.3135 401.364 22.4922C236.03 66.9552 106.077 179.675 111.104 274.258C115.01 347.731 199.219 388.644 314.115 382.406C149.23 398.807 19.875 365.34 2.27413 293.161C-19.9687 201.945 144.687 83.452 370.044 28.4992Z"/>
-        </mask>
-        <g filter="url(#filter0_i_1315_69)">
-          <path d="M501.807 5.39339C668.936 -12.1224 800.593 21.2934 818.361 94.1589C840.604 185.375 675.948 303.867 450.592 358.82C434.122 362.836 417.783 366.399 401.636 369.523C407.575 368.129 413.556 366.627 419.572 365.009C584.905 320.546 714.859 207.826 709.831 113.243C705.868 38.7054 619.259 -2.3243 501.807 5.39339ZM370.044 28.4992C388.714 23.9465 407.216 19.9756 425.461 16.568C417.502 18.3418 409.465 20.3135 401.364 22.4922C236.03 66.9552 106.077 179.675 111.104 274.258C115.01 347.731 199.219 388.644 314.115 382.406C149.23 398.807 19.875 365.34 2.27413 293.161C-19.9687 201.945 144.687 83.452 370.044 28.4992Z" fill="url(#paint0_radial_1315_69)"/>
-        </g>
-        <path d="M501.807 5.39339L501.494 2.40972L502.004 8.38693L501.807 5.39339ZM818.361 94.1589L821.276 93.4482L818.361 94.1589ZM450.592 358.82L451.303 361.735L450.592 358.82ZM401.636 369.523L400.95 366.602L402.206 372.468L401.636 369.523ZM419.572 365.009L420.351 367.906L419.572 365.009ZM709.831 113.243L712.827 113.084L709.831 113.243ZM370.044 28.4992L369.333 25.5846L370.044 28.4992ZM425.461 16.568L426.113 19.4962L424.91 13.619L425.461 16.568ZM401.364 22.4922L400.585 19.5952L401.364 22.4922ZM111.104 274.258L108.108 274.417L108.108 274.417L111.104 274.258ZM314.115 382.406L314.412 385.391L313.952 379.41L314.115 382.406ZM2.27413 293.161L-0.640465 293.871L2.27413 293.161ZM501.807 5.39339L502.12 8.37705C585.449 -0.356248 659.748 3.63294 715.305 18.7776C771.06 33.9762 806.969 60.1013 815.447 94.8696L818.361 94.1589L821.276 93.4482C811.986 55.3511 773.181 28.3355 716.883 12.9888C660.387 -2.41189 585.293 -6.37272 501.494 2.40972L501.807 5.39339ZM818.361 94.1589L815.447 94.8696C820.752 116.627 814.994 140.293 799.443 164.652C783.886 189.019 758.665 213.839 725.574 237.653C659.405 285.271 562.28 328.497 449.881 355.906L450.592 358.82L451.303 361.735C564.26 334.19 662.141 290.694 729.079 242.523C762.54 218.443 788.398 193.102 804.5 167.88C820.609 142.65 827.092 117.299 821.276 93.4482L818.361 94.1589ZM450.592 358.82L449.881 355.906C433.458 359.91 417.166 363.462 401.066 366.577L401.636 369.523L402.206 372.468C418.4 369.335 434.786 365.762 451.303 361.735L450.592 358.82ZM401.636 369.523L402.322 372.443C408.291 371.042 414.303 369.533 420.351 367.906L419.572 365.009L418.792 362.112C412.809 363.722 406.859 365.215 400.95 366.602L401.636 369.523ZM419.572 365.009L420.351 367.906C503.411 345.569 577.65 306.075 630.553 260.187C683.333 214.406 715.414 161.76 712.827 113.084L709.831 113.243L706.835 113.402C709.276 159.309 678.894 210.315 626.621 255.655C574.471 300.89 501.066 339.987 418.792 362.112L419.572 365.009ZM709.831 113.243L712.827 113.084C710.775 74.4836 687.263 44.7602 649.73 25.7948C612.274 6.86807 560.677 -1.48143 501.61 2.39985L501.807 5.39339L502.004 8.38693C560.388 4.55051 610.822 12.857 647.024 31.15C683.15 49.4044 704.925 77.4647 706.835 113.402L709.831 113.243ZM370.044 28.4992L370.754 31.4138C389.372 26.874 407.82 22.9146 426.011 19.517L425.461 16.568L424.91 13.619C406.612 17.0366 388.056 21.0189 369.333 25.5846L370.044 28.4992ZM425.461 16.568L424.808 13.6398C416.807 15.423 408.728 17.4051 400.585 19.5952L401.364 22.4922L402.143 25.3893C410.202 23.2219 418.197 21.2605 426.113 19.4962L425.461 16.568ZM401.364 22.4922L400.585 19.5952C317.524 41.9325 243.285 81.4269 190.383 127.314C137.602 173.095 105.521 225.74 108.108 274.417L111.104 274.258L114.1 274.099C111.66 228.192 142.042 177.186 194.314 131.846C246.465 86.6118 319.869 47.515 402.143 25.3893L401.364 22.4922ZM111.104 274.258L108.108 274.417C110.131 312.462 133.003 341.89 169.606 360.886C206.132 379.843 256.489 388.539 314.277 385.402L314.115 382.406L313.952 379.41C256.845 382.511 207.649 373.87 172.37 355.561C137.169 337.292 115.983 309.527 114.1 274.099L111.104 274.258ZM314.115 382.406L313.818 379.421C231.609 387.598 158.446 383.319 103.767 368.111C48.8966 352.849 13.5868 326.889 5.18873 292.45L2.27413 293.161L-0.640465 293.871C8.56229 331.611 46.7302 358.474 102.159 373.891C157.778 389.361 231.736 393.615 314.412 385.391L314.115 382.406ZM2.27413 293.161L5.18873 292.45C-0.116745 270.693 5.64103 247.026 21.1923 222.668C36.7494 198.3 61.9701 173.48 95.0616 149.666C161.231 102.048 258.356 58.822 370.754 31.4138L370.044 28.4992L369.333 25.5846C256.375 53.1292 158.494 96.6257 91.5569 144.796C58.0952 168.877 32.2377 194.217 16.1351 219.439C0.0268083 244.67 -6.45638 270.021 -0.640465 293.871L2.27413 293.161Z" fill="#FF9D7C" mask="url(#path-1-inside-1_1315_69)"/>
-        <defs>
-          <filter id="filter0_i_1315_69" x="0.261353" y="0.81543" width="820.113" height="385.687" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="10"/>
-            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.686275 0 0 0 0 0.580392 0 0 0 0.5 0"/>
-            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1315_69"/>
-          </filter>
-          <radialGradient id="paint0_radial_1315_69" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(410 194) rotate(-26.0834) scale(478.759 1314.73)">
-            <stop offset="0.365385" stop-color="#FF7F52"/>
-            <stop offset="1" stop-color="#FF4200"/>
-          </radialGradient>
-        </defs>
-      </svg>
-      <h1>Создавай контент за 15 минут с помощью ИИ и готовых инструментов</h1>
-      <p class="hero-subtitle">Fasty — это твой верный помощник в ведении блога без хаоса и траты времени</p>
+      <h1>Создавай контент за 15 минут в день, регулярно продвигая свой блог</h1>
+      <p class="hero-subtitle">Fasty — верный помощник в ведении блога для экспертов из любой ниши</p>
       <a href="https://t.me/ai_fasty_bot" class="hero-bot" target="_blank">Создать контент</a>
     </div>
   </section>
 
-  <!-- Features Section -->
+  <!-- Pain Section -->
+  <section class="pain">
+    <div class="container">
+      <h2>Знакомо?</h2>
+      <ul class="pain-list">
+        <li>Часто ломаешь голову, что выложить в блог?</li>
+        <li>Тратишь на посты по 1–2 часа?</li>
+        <li>Не хватает насмотренности, чтобы красиво оформить?</li>
+        <li>Не понимаешь, как писать, чтобы покупали?</li>
+      </ul>
+      <p>С Fasty ты забудешь об этом — контент будет готов за 15 минут и начнёт продавать за тебя.</p>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="solution">
+    <div class="container">
+      <h2>Как работает Fasty</h2>
+      <div class="steps">
+        <div class="step">Зайди в Fasty</div>
+        <div class="step">Отправь свой сырой набросок</div>
+        <div class="step">Получи готовый пост</div>
+        <div class="step">Оформи стильную карусель по готовым шаблонам</div>
+      </div>
+      <p class="solution-subtitle">От идеи до публикации за 15 минут. Всё в одном Telegram-боте, без скачиваний и сложных настроек.</p>
+    </div>
+  </section>
+
+  <!-- Features -->
   <section class="features" id="features">
     <div class="container">
       <h2>Что умеет Fasty:</h2>
       <div class="features-grid">
         <div class="feature-card">
-          <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
           <h3>Создание постов-каруселей</h3>
-          <p>Автоматически генерирует структурированные и красивые посты-карусели с возможностью редактировать дизайн</p>
+          <p>Автоматически генерирует структурированные и красивые карусели с возможностью редактировать дизайн</p>
         </div>
         <div class="feature-card">
-          <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
           <h3>Генерация идей</h3>
-          <p>Анализирует самые горячие и охватные темы с популярных ресурсов и предлагает конкретные идеи для контента</p>
+          <p>Анализирует популярные темы и предлагает конкретные идеи для твоей ниши</p>
         </div>
         <div class="feature-card">
-          <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg>
           <h3>Генерация хуков</h3>
-          <p>Придумывает различные типы цепляющих заголовков для рилс и постов</p>
+          <p>Придумывает цепляющие заголовки для рилс и постов</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Section -->
+  <!-- Benefits -->
+  <section class="benefits">
+    <div class="container">
+      <h2>Что даст тебе Fasty</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">Увеличишь регулярность публикаций</div>
+        <div class="benefit-card">Поднимешь охваты и вовлечённость благодаря актуальным темам и цепляющим хукам</div>
+        <div class="benefit-card">Освободишь время для стратегии, а не рутины</div>
+      </div>
+      <p style="text-align:center; margin-top:30px; color:#666;">Сэкономь до 80% времени на создании контента</p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
   <section class="pricing" id="pricing">
     <div class="container">
       <h2>Получи доступ ко всем функциям Fasty</h2>
@@ -423,7 +355,7 @@
         <p class="description">Доступ ко всем функциям для быстрого создания контента с ИИ</p>
         <ul>
           <li>Безлимитная генерация идей и заголовков</li>
-          <li>Неограниченное создание постов-каруселей с дизайном</li>
+          <li>Создание постов-каруселей с дизайном</li>
           <li>Доступ ко всем обновлениям</li>
           <li>Приоритетная поддержка</li>
         </ul>
@@ -432,23 +364,27 @@
     </div>
   </section>
 
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Попробуй Fasty бесплатно</h2>
+      <p style="color:#555; font-size:16px; margin-bottom:24px;">Воспользуйся 3 бесплатными генерациями и оцени результат сам.</p>
+      <a href="https://t.me/ai_fasty_bot" target="_blank">Попробовать</a>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <p>
-            ИП Корешилов Егор Юрьевич<br>
-            ИНН 352706623956<br>
-            ОГРНИП 324350000002644
-          </p>
+          <p>ИП Корешилов Егор Юрьевич<br>ИНН 352706623956<br>ОГРНИП 324350000002644</p>
         </div>
         <div class="footer-section">
           <p>
             Поддержка: <a href="https://t.me/ai_fasty_support" target="_blank">@ai_fasty_support</a><br>
             Telegram-бот: <a href="https://t.me/ai_fasty_bot" target="_blank">@ai_fasty_bot</a><br>
-            Email: <a href="mailto:fastyai.app@mail.ru">fastyai.app@mail.ru</a><br>
-            <br>
+            Email: <a href="mailto:fastyai.app@mail.ru">fastyai.app@mail.ru</a><br><br>
             <a href="/terms">Условия использования</a>
           </p>
         </div>
